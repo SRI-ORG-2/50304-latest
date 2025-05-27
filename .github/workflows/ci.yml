@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   scan:
-    uses: your-org/alma-actions/.github/workflows/shared-aqua-scan.yml@main
+    uses: SRI-ORG-2/alma-actions/.github/workflows/shared-aqua-scan.yml@main
     secrets: inherit
 
   build-and-sbom:
