@@ -1,0 +1,18 @@
+name: Customer CI with Shared Workflows
+
+on: [push, pull_request]
+
+jobs:
+  scan:
+    uses: your-org/alma-actions/.github/workflows/shared-aqua-scan.yml@main
+    secrets: inherit
+
+  build-and-sbom:
+    needs: scan
+    strategy:
+      matrix:
+        app: [app1, app2]
+    uses: SRI-ORG-2/alma-actions/.github/workflows/shared-build-and-sbom.yml@main
+    with:
+      app_name: ${{ matrix.app }}
+    secrets: inherit
