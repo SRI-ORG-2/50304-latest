@@ -9,7 +9,6 @@ jobs:
       AQUA_KEY: ${{ secrets.AQUA_KEY }}
       AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
 
-
   build-and-sbom:
     needs: scan
     strategy:
