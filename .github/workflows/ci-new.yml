@@ -8,6 +8,7 @@ jobs:
     secrets:
       AQUA_KEY: ${{ secrets.AQUA_KEY }}
       AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
+      BILLY_PAT: ${{ secrets.BILLY_PAT }}
 
   build-and-sbom:
     needs: scan
@@ -20,3 +21,4 @@ jobs:
     secrets:
       AQUA_KEY: ${{ secrets.AQUA_KEY }}
       AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
+      BILLY_PAT: ${{ secrets.BILLY_PAT }}
