@@ -1,5 +1,4 @@
 name: Customer CI with Shared Workflows
-
 on: [push, pull_request]
 
 jobs:
